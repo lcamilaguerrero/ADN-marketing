@@ -1,0 +1,495 @@
+/* ================= VARIABLES ================= */
+:root {
+    --padding-lateral: 80px;
+    --max-width: 1200px;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #111;
+}
+
+/* ================= TIPOGRAFÍA ================= */
+h1, h2, h3 {
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 1.05;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.sub {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+/* ================= CONTENEDORES ================= */
+.container,
+.container-servicios,
+.container-contacto,
+.contenedor {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-lateral);
+}
+
+/* ================= NAV ================= */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--padding-lateral);
+    list-style: none;
+    position: relative;
+}
+
+.menu li {
+    flex: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.6;
+}
+
+/* LOGO CENTRADO PERFECTO */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    width: 200px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin-left: var(--padding-lateral);
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* ================= SECCIONES ================= */
+.servicios,
+.portafolio,
+.nosotros-hero,
+.portafolio-page {
+    padding: 140px 0;
+}
+
+/* ================= SERVICIOS HOME ================= */
+.cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* ================= PORTAFOLIO HOME ================= */
+.portafolio {
+    background: black;
+    color: white;
+}
+
+.proyectos {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.proyecto img {
+    width: 100%;
+}
+
+/* ================= CTA ================= */
+.cta {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+/* ================= PORTAFOLIO PAGE ================= */
+.container {
+    display: flex;
+    gap: 60px;
+}
+
+.intro {
+    width: 35%;
+}
+
+.grid {
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.item h3 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.item p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* ================= SERVICIOS PAGE ================= */
+.container-servicios {
+    display: flex;
+    gap: 60px;
+}
+
+.lista-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.servicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: #f7f7f7;
+    transition: 0.3s;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+}
+
+.info {
+    width: 60%;
+}
+
+.img-servicio {
+    width: 220px;
+}
+
+.icono {
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+/* ================= NOSOTROS ================= */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.texto {
+    width: 45%;
+}
+
+.imagen {
+    width: 55%;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+.bloques {
+    max-width: var(--max-width);
+    margin: 60px auto;
+    padding: 0 var(--padding-lateral);
+    display: flex;
+    gap: 40px;
+}
+
+.bloque {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.bloque:last-child {
+    border-right: none;
+}
+
+.bloque p {
+    margin: 10px 0 15px;
+}
+
+/* ================= STATS ================= */
+.stats {
+    background: #eee;
+    max-width: var(--max-width);
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stat {
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat h2 {
+    font-size: 48px;
+}
+
+/* ================= CONTACTO ================= */
+.container-contacto {
+    display: flex;
+    gap: 60px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+
+    :root {
+        --padding-lateral: 40px;
+    }
+
+    .container,
+    .container-servicios,
+    .container-contacto,
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .texto,
+    .imagen,
+    .intro,
+    .grid {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards,
+    .proyectos {
+        flex-direction: column;
+    }
+
+    .bloques {
+        flex-direction: column;
+    }
+
+    .bloque {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    :root {
+        --padding-lateral: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+    }
+}
+
+.mision-vision {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 40px;
+  }
+  
+.mision-vision .bloque {
+    text-align: left;
+}
+  
+.mision-vision h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+  
+.mision-vision .divider {
+    font-size: 60px;
+    font-weight: bold;
+}
+.clientes {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 50px 40px;
+}
+  
+.clientes h2 {
+    margin-bottom: 30px;
+}
+  
+.clientes .logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+  
+.clientes img {
+    height: 100px;
+    opacity: 0.8;
+}
+.container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap; /* CLAVE */
+}
+.titulo-portafolio {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+body {
+    padding-top: 80px;
+}
+.portafolio-page .container {
+    display: flex;
+    gap: 60px;
+    flex-wrap: nowrap; /* 🔥 IMPORTANTE */
+}
